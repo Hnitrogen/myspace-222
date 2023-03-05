@@ -24,6 +24,10 @@
             <router-link :class="route_name == 'goto' ? 'nav-link active' : 'nav-link'" 
             :to="{name: 'goto'}">友情链接</router-link>
           </li>
+          <li class="nav-item">
+            <router-link :class="route_name == 'pastebin' ? 'nav-link active' : 'nav-link'" 
+            :to="{name: 'pastebin'}">Pastebin</router-link>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item dropdown">

@@ -5,6 +5,7 @@ import PkIndexView from '../views/pk/PkIndexView'
 import RecordIndexView from '../views/record/RecordIndexView' 
 import MyBotView from '../views/account/me/MyBotView'
 import GotoView from '../views/goto/GotoView'
+import PasteBinView from '../views/pastebin/PasteBinView'
 
 const routes = [
   {
@@ -41,6 +42,11 @@ const routes = [
     path: "/goto/",
     name: "goto",
     component: GotoView,
+  },
+  {
+    path: "/pastebin/",
+    name: "pastebin",
+    component: PasteBinView,
   },
   {
     path: "/:catchAll(.*)",
