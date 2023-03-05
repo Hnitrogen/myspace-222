@@ -10,15 +10,19 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <router-link :class="route_name == 'pk_index' ? 'nav-link active' : 'nav-link'" 
-            :to="{name: 'pk_index'}">对战</router-link>
+            :to="{name: 'pk_index'}">首页</router-link>
           </li>
           <li class="nav-item">
             <router-link :class="route_name == 'record_index' ? 'nav-link active' : 'nav-link'" 
-            :to="{name: 'record_index'}">对局列表</router-link>
+            :to="{name: 'record_index'}">博客</router-link>
           </li>
           <li class="nav-item">
             <router-link :class="route_name == 'ranklist_index' ? 'nav-link active' : 'nav-link'" 
-            :to="{name: 'ranklist_index'}">排行榜</router-link>
+            :to="{name: 'ranklist_index'}">赛博皮猫</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link :class="route_name == 'goto' ? 'nav-link active' : 'nav-link'" 
+            :to="{name: 'goto'}">友情链接</router-link>
           </li>
         </ul>
         <ul class="navbar-nav">

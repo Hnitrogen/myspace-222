@@ -4,6 +4,7 @@ import RankListIndexView from '../views/ranklist/RanklistIndexView'
 import PkIndexView from '../views/pk/PkIndexView'
 import RecordIndexView from '../views/record/RecordIndexView' 
 import MyBotView from '../views/account/me/MyBotView'
+import GotoView from '../views/goto/GotoView'
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     path: "/404/",
     name: "notfound",
     component: NotFound,
+  },
+  {
+    path: "/goto/",
+    name: "goto",
+    component: GotoView,
   },
   {
     path: "/:catchAll(.*)",
