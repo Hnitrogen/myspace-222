@@ -1,12 +1,12 @@
 <template>
-    <ContentField>PasteBin</ContentField>
+    <PasteBinCard></PasteBinCard>
 </template>
 
 <script>
-import ContentField from '../../components/ContentField.vue' 
+import PasteBinCard from '../../components/PasteBinCard.vue' 
 export default {
     components: {
-            ContentField,
+        PasteBinCard,
     }
 }
 </script>
