@@ -3,12 +3,8 @@
         <div class="card">
             <div class="card-body">
                 <h1 style="text-align: center;">PasteBin</h1>
-                <h5 style="text-align: center;">Paste from hnitro11</h5>
-                
-                <div class="reponse-info">
+                <h5 style="text-align: center;">Paste from hnitro</h5>
                     <slot></slot>
-                </div>
-                
             </div>
         </div>
     </div>
