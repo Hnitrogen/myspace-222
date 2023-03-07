@@ -3,12 +3,15 @@
         <div class="container">
             <h1 style="text-align: center;">赛博肥猫</h1>
             <div class="text-center picture">
-                <img src="../../assets/images/tou.jpeg" class="rounded" alt="showup">
+                <img src={{ posts.url }} class="rounded" alt="showup">
             </div>  
             
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-warning" type="button">上传肥猫</button>
-                <button class="btn btn-success" type="button">随机肥猫</button>
+                <button @click="say()"
+                class="btn btn-success" type="button">
+                    随机肥猫
+                </button>
             </div>
         </div>
     </ContentField>
@@ -16,10 +19,36 @@
 
 <script>
 import ContentField from '../../components/ContentField.vue' 
+import { reactive } from 'vue';
+import $ from 'jquery'
+
 export default {
     components: {
             ContentField,
-    }
+    },
+    setup() {
+        const posts = reactive({});
+        $.ajax({
+            url: "http://jiwaicat.top:8000/getpictures/2/",
+            type: "GET",
+            success(resp) {
+                posts.url = resp.picture ; 
+                console.log(posts.url) ;
+                posts.url = "http://jiwaicat.top:8000/" + posts.url ;
+                console.log(posts.url) ;
+                console.log(typeof(posts.url)) ;
+            }
+        });
+        
+        return {
+            posts ,
+        }
+    },
+    methods: {
+        say() {
+            console.log("click!");
+        }
+    },
 }
 </script>
 
