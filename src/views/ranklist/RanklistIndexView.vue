@@ -3,13 +3,16 @@
         <div class="container">
             <h1 style="text-align: center;">赛博肥猫</h1>
             <div class="text-center picture">
-                <img src={{ posts.url }} class="rounded" alt="showup">
+                <!-- <img src={{ posts.url }} class="rounded" alt="showup"> -->
+                <!-- <img src={{ posts.url }} class="rounded" alt="showup"> -->
+                <img v-bind:src="posts.url" class="rounded" alt="showup"> 
+                <!-- 绑定标签的属性值要用v-bind  如果要绑定文本插值才是 {{ }} -->
             </div>  
             
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-warning" type="button">上传肥猫</button>
                 <button @click="say()"
-                class="btn btn-success" type="button">
+                class="btn btn-success" type="button"> 
                     随机肥猫
                 </button>
             </div>
@@ -27,7 +30,7 @@ export default {
             ContentField,
     },
     setup() {
-        const posts = reactive({});
+        let posts = reactive({});
         $.ajax({
             url: "http://jiwaicat.top:8000/getpictures/2/",
             type: "GET",
@@ -39,7 +42,6 @@ export default {
                 console.log(typeof(posts.url)) ;
             }
         });
-        
         return {
             posts ,
         }
