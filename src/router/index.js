@@ -9,48 +9,48 @@ import PasteBinView from '../views/pastebin/PasteBinView'
 
 const routes = [
   {
-    path: "/",
+    path: "/myspace/",
     name: "home",
     redirect: "/pk/",
   },
   {
-    path: "/ranklist/",
+    path: "/myspace/ranklist/",
     name: "ranklist_index",
     component: RankListIndexView,
   },
   {
-    path: "/pk/",
+    path: "/myspace/pk/",
     name: "pk_index",
     component: PkIndexView,
   },
   {
-    path: "/record/",
+    path: "/myspace/record/",
     name: "record_index",
     component: RecordIndexView,
   },
   {
-    path: "/mybot/",
+    path: "/myspace/mybot/",
     name: "mybot_index",
     component: MyBotView,
   },
   {
-    path: "/404/",
+    path: "/myspace/404/",
     name: "notfound",
     component: NotFound,
   },
   {
-    path: "/goto/",
+    path: "/myspace/goto/",
     name: "goto",
     component: GotoView,
   },
   {
-    path: "/pastebin/",
+    path: "/myspace/pastebin/",
     name: "pastebin",
     component: PasteBinView,
   },
   {
-    path: "/:catchAll(.*)",
-    redirect: "/404/"
+    path: "/myspace/:catchAll(.*)",
+    redirect: "/myspace/404/"
   }
 ]
 

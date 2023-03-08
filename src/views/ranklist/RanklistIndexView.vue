@@ -31,7 +31,7 @@ export default {
     setup() {
         let posts = reactive({});
         $.ajax({
-            url: "http://jiwaicat.top:8000/getpictures/2/",
+            url: "http://jiwaicat.top:8000/myspace/getpictures/2",
             type: "GET",
             data: {
                 
@@ -50,11 +50,16 @@ export default {
     },
     methods: {
         say() {
+            // this.$router.push('/myspace/goto/');
+            // this.$router.push('/myspace/ranklist/');
             location.reload();
             console.log("click!");
+            // this.$router.push('/myspace/ranklist/');
         }
     },
 }
+
+
 </script>
 
 <style scoped>
