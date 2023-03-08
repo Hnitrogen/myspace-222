@@ -4,7 +4,6 @@
             <h1 style="text-align: center;">赛博肥猫</h1>
             <div class="text-center picture">
                 <!-- <img src={{ posts.url }} class="rounded" alt="showup"> -->
-                <!-- <img src={{ posts.url }} class="rounded" alt="showup"> -->
                 <img v-bind:src="posts.url" class="rounded" alt="showup"> 
                 <!-- 绑定标签的属性值要用v-bind  如果要绑定文本插值才是 {{ }} -->
             </div>  
@@ -34,6 +33,9 @@ export default {
         $.ajax({
             url: "http://jiwaicat.top:8000/getpictures/2/",
             type: "GET",
+            data: {
+                
+            },
             success(resp) {
                 posts.url = resp.picture ; 
                 console.log(posts.url) ;
@@ -48,6 +50,7 @@ export default {
     },
     methods: {
         say() {
+            location.reload();
             console.log("click!");
         }
     },
